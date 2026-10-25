@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexus — Project Landing</title>
-  <meta name="description" content="Landingpage von Nexus007008" />
+  <title>Nexus — Precision. Performance. Progress.</title>
+  <meta name="description" content="Nexus — a focused platform for building high-performance digital products." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Space Canvas Background -->
+  <canvas id="space"></canvas>
+
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo">Nexus<span>007</span></a>
-      <div class="nav-links">
+      <a href="#" class="logo">NEXUS</a>
+      <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#contact">Contact</a>
-        <a href="https://github.com/Nexus007008" class="btn btn-sm" target="_blank" rel="noopener">GitHub</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
       </div>
-      <button class="menu-toggle" aria-label="Menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -30,94 +37,129 @@
   <!-- Hero -->
   <header class="hero">
     <div class="container hero-inner">
-      <div class="hero-badge">Welcome</div>
-      <h1>Build something<br /><span class="gradient">extraordinary</span></h1>
+      <p class="hero-label">Digital Infrastructure</p>
+      <h1>Building systems<br>that scale with intent.</h1>
       <p class="hero-sub">
-        Eine moderne Landingpage für dein nächstes Projekt.<br />
-        Clean, schnell und bereit für GitHub Pages.
+        Nexus delivers precision-engineered solutions for teams who value clarity, performance, and long-term reliability.
       </p>
       <div class="hero-actions">
-        <a href="#features" class="btn btn-primary">Explore Features</a>
-        <a href="https://github.com/Nexus007008" class="btn btn-ghost" target="_blank" rel="noopener">View on GitHub →</a>
+        <a href="#capabilities" class="btn btn-primary">Explore Capabilities</a>
+        <a href="https://github.com/Nexus007008" class="btn btn-outline" target="_blank" rel="noopener">View on GitHub</a>
       </div>
     </div>
-    <div class="hero-glow"></div>
   </header>
 
-  <!-- About / Project -->
+  <!-- About -->
   <section id="about" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">About the Project</span>
-        <h2>Was steckt dahinter?</h2>
+        <span class="eyebrow">About</span>
+        <h2>Clarity over complexity.</h2>
         <p>
-          Hier kannst du dein Projekt vorstellen. Ersetze diesen Text einfach mit deiner eigenen Beschreibung.
-          Die Seite ist bewusst minimal gehalten, damit du schnell loslegen kannst.
+          We design and ship digital products with a single principle: every decision should reduce friction and increase reliability. No noise. No unnecessary layers. Just focused execution.
         </p>
       </div>
 
-      <div class="about-grid">
-        <div class="about-card">
-          <div class="icon">⚡</div>
-          <h3>Schnell & leicht</h3>
-          <p>Pure HTML + CSS. Keine Frameworks, keine Build-Tools. Einfach hochladen und fertig.</p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Focus on quality</span>
         </div>
-        <div class="about-card">
-          <div class="icon">🎨</div>
-          <h3>Modern Design</h3>
-          <p>Dunkles Theme, weiche Gradienten und klare Typografie. Sieht auf jedem Gerät gut aus.</p>
+        <div class="stat">
+          <span class="stat-value">Zero</span>
+          <span class="stat-label">Unnecessary dependencies</span>
         </div>
-        <div class="about-card">
-          <div class="icon">🚀</div>
-          <h3>GitHub Pages ready</h3>
-          <p>Repo erstellen, Dateien pushen, fertig. Deine Seite ist unter <code>nexus007008.github.io</code> erreichbar.</p>
+        <div class="stat">
+          <span class="stat-value">∞</span>
+          <span class="stat-label">Scalable by design</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="section section-alt">
+  <!-- Capabilities -->
+  <section id="capabilities" class="section section-dark">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Features</span>
-        <h2>Alles was du brauchst</h2>
+        <span class="eyebrow">Capabilities</span>
+        <h2>What we deliver</h2>
       </div>
 
-      <div class="features-grid">
-        <div class="feature">
-          <span class="feature-num">01</span>
-          <h3>Responsive</h3>
-          <p>Sieht auf Desktop, Tablet und Handy gleich gut aus.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">01</div>
+          <h3>System Architecture</h3>
+          <p>Robust foundations designed for growth. Clean separation of concerns, predictable data flow, and maintainable structure from day one.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">02</div>
+          <h3>Performance Engineering</h3>
+          <p>Every millisecond matters. We optimize for real-world conditions — low latency, efficient rendering, and minimal resource usage.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">03</div>
+          <h3>Interface Design</h3>
+          <p>Interfaces that feel intentional. Clear hierarchy, purposeful motion, and accessibility built into every interaction.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">04</div>
+          <h3>Reliable Delivery</h3>
+          <p>From prototype to production with discipline. Versioned, tested, and documented so teams can move forward with confidence.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section id="approach" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Approach</span>
+        <h2>How we work</h2>
+      </div>
+
+      <div class="process">
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <div class="process-content">
+            <h3>Understand</h3>
+            <p>We start by mapping constraints, goals, and edge cases. Clarity at the beginning prevents costly corrections later.</p>
+          </div>
         </div>
-        <div class="feature">
-          <span class="feature-num">02</span>
-          <h3>Dark Mode</h3>
-          <p>Modernes dunkles Design mit dezenten Akzenten.</p>
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <div class="process-content">
+            <h3>Architect</h3>
+            <p>Structure comes next. We define boundaries, data flows, and interfaces that remain stable as the product evolves.</p>
+          </div>
         </div>
-        <div class="feature">
-          <span class="feature-num">03</span>
-          <h3>Leicht anpassbar</h3>
-          <p>Farben, Texte und Abschnitte kannst du in wenigen Minuten ändern.</p>
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <div class="process-content">
+            <h3>Build</h3>
+            <p>Implementation is deliberate. Clean code, meaningful tests, and continuous validation against real requirements.</p>
+          </div>
         </div>
-        <div class="feature">
-          <span class="feature-num">04</span>
-          <h3>Keine Dependencies</h3>
-          <p>Nur HTML, CSS und ein bisschen JS. Kein npm, kein Build.</p>
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <div class="process-content">
+            <h3>Refine</h3>
+            <p>Shipping is not the end. We measure, observe, and iterate — keeping systems sharp and relevant over time.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="contact" class="section">
+  <!-- Contact / CTA -->
+  <section id="contact" class="section section-cta">
     <div class="container">
-      <div class="cta-box">
-        <h2>Ready to launch?</h2>
-        <p>Clone das Repo, passe die Texte an und push es auf GitHub. In unter 5 Minuten live.</p>
+      <div class="cta">
+        <h2>Ready to build with precision?</h2>
+        <p>Whether you need a complete system or a focused component, Nexus is built for teams that take quality seriously.</p>
         <div class="cta-actions">
-          <a href="https://github.com/Nexus007008" class="btn btn-primary" target="_blank" rel="noopener">Zum GitHub-Profil</a>
-          <a href="#about" class="btn btn-ghost">Mehr erfahren</a>
+          <a href="https://github.com/Nexus007008" class="btn btn-primary" target="_blank" rel="noopener">Connect on GitHub</a>
+          <a href="#about" class="btn btn-outline">Learn More</a>
         </div>
       </div>
     </div>
@@ -126,14 +168,18 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <span class="logo">Nexus<span>007</span></span>
-        <p>Built with ❤️ for GitHub Pages</p>
+      <div class="footer-brand">
+        <span class="logo">NEXUS</span>
+        <p>Precision. Performance. Progress.</p>
       </div>
-      <div class="footer-right">
+      <div class="footer-links">
         <a href="https://github.com/Nexus007008" target="_blank" rel="noopener">GitHub</a>
-        <a href="#">Privacy</a>
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
       </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Nexus. All rights reserved.</p>
     </div>
   </footer>
 
